@@ -32,4 +32,9 @@ a-scene scene
         rolloffFactor "3"
         distanceModel "inverse"
         refDistance "1"
-        autoplay "true"
+        autoplay "false"
+        on "entervr"
+
+coffeescript
+    scene.addEventListener 'enter-vr', ->
+        music.emit "entervr"
