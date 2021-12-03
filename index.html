@@ -1,1 +1,23 @@
-<!doctype html><html><head><title>Positional Audio Test</title><meta http-equiv="content-type" content="text/html; charset=UTF8"><meta name="viewport" content="width=device-width"></head><body><script src="lib/aframe-v1.2.0.min.js"></script><a-scene id="scene" renderer="colorManagement: true; highRefreshRate: true; foveationLevel: 3;"><a-sphere position="0 1 -3" radius="0.5" color="#3aebca"></a-sphere><a-plane width="100" height="100" color="#333333" rotation="-90 0 0"></a-plane><a-sound id="music" src="https://res.cloudinary.com/dabjq8kaj/video/upload/v1638482558/vread/music/ES_Empty_Road_-_ocean_jams_gl7zef.mp3" loop="true" position="0 1 -3" rolloffFactor="3" distanceModel="inverse" refDistance="1" autoplay="true"></a-sound></a-scene></body></html>
+<!doctype html>
+<html>
+  <head>
+    <title>Positional Audio Test</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF8">
+    <meta name="viewport" content="width=device-width">
+  </head>
+  <body>
+    <script src="lib/aframe-v1.2.0.min.js"></script>
+    <a-scene id="scene" renderer="colorManagement: true; highRefreshRate: true; foveationLevel: 3;">
+      <a-sphere position="0 1 -3" radius="0.5" color="#3aebca"></a-sphere>
+      <a-plane width="100" height="100" color="#333333" rotation="-90 0 0"></a-plane>
+      <a-sound id="music" src="https://res.cloudinary.com/dabjq8kaj/video/upload/v1638482558/vread/music/ES_Empty_Road_-_ocean_jams_gl7zef.mp3" loop="true" position="0 1 -3" rolloffFactor="3" distanceModel="inverse" refDistance="1" autoplay="false" on="entervr"></a-sound>
+    </a-scene>
+    <script>(function() {
+  scene.addEventListener('enter-vr', function() {
+    return music.emit("entervr");
+  });
+
+}).call(this);
+    </script>
+  </body>
+</html>
