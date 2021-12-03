@@ -1,3 +1,8 @@
+<<<<<<< Updated upstream
+=======
+<<<<<<< Updated upstream
+=======
+>>>>>>> Stashed changes
 # Logs
 logs
 *.log
@@ -102,3 +107,8 @@ dist
 
 # TernJS port file
 .tern-port
+<<<<<<< Updated upstream
+=======
+>>>>>>> Stashed changes
+.DS_Store
+>>>>>>> Stashed changes
