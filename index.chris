@@ -10,7 +10,7 @@ meta
     content "width=device-width"
 
 script
-    src "lib/aframe-v1.2.0.min.js"
+    src "lib/aframe.js"
 
 a-scene scene
     renderer "colorManagement: true; highRefreshRate: true; foveationLevel: 3;"
